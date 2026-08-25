@@ -1,6 +1,15 @@
+import pandas as pd
 import streamlit as st
 
-st.title("🎈 My new app")
+st.title("Study Planner")
 st.write(
-    "Let's start building! For help and inspiration, head over to [docs.streamlit.io](https://docs.streamlit.io/)."
+    "Let's go!"
 )
+
+
+st.sidebar.title("Menu")
+page = st.sidebar.radio(
+    "Go to",
+    ["Dashboard", "Pomodoro Timer", "Task Tracker", "Study Log", "Analytics"],
+)
+
