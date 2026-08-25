@@ -1,8 +1,8 @@
-# 🎈 Blank app template
+#  Study planner app
 
-A simple Streamlit app template for you to modify!
+Study planner app with pomodoro timer
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://blank-app-template.streamlit.app/)
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://my-office.streamlit.app/)
 
 ### How to run it on your own machine
 
