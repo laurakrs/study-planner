@@ -4,6 +4,9 @@ import time
 
 st.title("Pomodoro Timer")
 
+if "logs" not in st.session_state:
+    st.session_state.logs = []
+
 col1, col2 = st.columns(2)
 with col1:
     work_min = st.number_input(
@@ -25,7 +28,7 @@ col_start, col_break = st.columns(2)
 start_work = col_start.button(
     "Start work session", use_container_width=True
 )
-start_break = col_break.button("Start Break", use_container_width=True)
+start_break = col_break.button("Take a break", use_container_width=True)
 
 
 def run_timer(minutes, label, is_work=True):
@@ -49,6 +52,13 @@ def run_timer(minutes, label, is_work=True):
 
         if subject:
             hours_added = round(minutes / 60, 2)
+            st.session_state.logs.append(
+                {
+                    "subject": subject,
+                    "hours": float(hours_added),
+                    "log_date": str(datetime.date.today()),
+                }
+            )
             st.info(
                 f"Saved {hours_added} hours under '{subject}'!"
             )
