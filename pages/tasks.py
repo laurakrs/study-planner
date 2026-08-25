@@ -1,5 +1,4 @@
 import datetime
-import pandas as pd
 import streamlit as st
 
 st.title("Tasks")
@@ -7,8 +6,6 @@ st.title("Tasks")
 # Ensure session state tasks container exists
 if "tasks" not in st.session_state:
     st.session_state.tasks = []
-
-st.title("Tasks")
 
 # Form to create new task
 with st.expander("Add New Task"):

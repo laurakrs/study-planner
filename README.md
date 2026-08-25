@@ -4,22 +4,26 @@ Study planner app with pomodoro timer
 
 [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://my-office.streamlit.app/)
 
+**Features**
+
+* Dashboard 
+* Pomodoro Timer
+* Tasks
+
+
 ### How to run it on your own machine
-
-Prerequisite: install `uv` if you don't already have it.
-
 ```
-$ curl -LsSf https://astral.sh/uv/install.sh | sh
+git clone https://github.com/your-username/study-planner.git
+cd study-planner
 ```
 
-1. Sync the dependencies
+```
+pip install -r requirements.txt
+```
 
-   ```
-   $ uv sync
-   ```
+```
+streamlit run streamlit_app.py
+```
 
-2. Run the app
 
-   ```
-   $ uv run streamlit run streamlit_app.py
-   ```
+
